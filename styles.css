@@ -1,0 +1,90 @@
+:root{--navy:#0f1a2e;--navy-deep:#0a0f1c;--sand:#d8c5ab;--mist:#cbd5e0;--blue:#4a9ef5;--blue-dark:#2f86e6;--ink:#111827;--text:#3f3f46;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);background:var(--white);line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section[id]{scroll-margin-top:80px}
+
+/* header */
+.site-header{background:var(--navy);position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:90px}
+.logo img{height:40px;width:auto}
+.nav{display:flex;gap:40px;list-style:none}
+.nav a{color:var(--white);text-decoration:none;font-size:15px}
+.nav a:hover{opacity:.75}
+
+/* buttons */
+.btn{display:inline-block;background:var(--blue);color:var(--white);text-decoration:none;font-weight:600;font-size:16px;padding:12px 34px;border-radius:4px;transition:background .15s}
+.btn:hover{background:var(--blue-dark)}
+
+/* hero */
+.hero{padding:80px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero h1{color:var(--ink);font-size:46px;line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:16px}
+.hero p{font-size:20px;margin-bottom:24px}
+.hero p strong{color:#000}
+.hero img{border-radius:6px;width:100%}
+
+/* achievements */
+.achievements{background:var(--sand);padding:72px 0 120px}
+h2.section-title{text-align:center;color:var(--ink);font-size:36px;font-weight:700;margin-bottom:48px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.card{background:var(--white);border-radius:14px;padding:44px 32px}
+.card img{width:150px;height:auto;margin:0 auto 24px}
+.card h3{color:#000;font-size:20px;line-height:1.2;font-weight:700;margin-bottom:12px}
+.card p{font-size:16px}
+
+/* about */
+.about{padding:80px 0}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about img{width:100%}
+.about h2{color:var(--ink);font-size:40px;font-weight:700;margin-bottom:12px}
+.about p{font-size:18px;margin-bottom:24px}
+
+/* testimonials */
+.testimonials{background:var(--mist);padding:72px 0 120px}
+.testimonials h2.section-title{color:#1e3a6e}
+.t-card{background:var(--white);border:1px solid #64748b;border-radius:14px;padding:36px 30px}
+.t-card img{width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 24px}
+.t-card blockquote{font-size:16px;margin-bottom:12px}
+.t-card .name{color:#000;font-weight:800;font-size:18px;margin-bottom:12px}
+.t-card .role{color:#000;font-weight:800;font-size:17px}
+
+/* contact */
+.contact{background:var(--navy);color:var(--white);padding:90px 0 110px;text-align:center}
+.contact h2{font-size:40px;font-weight:700;margin-bottom:16px}
+.contact p{font-size:19px;opacity:.85;max-width:620px;margin:0 auto 32px}
+
+/* footer */
+.site-footer{background:var(--navy-deep);color:var(--white);padding:0 0 48px}
+.site-footer .wrap{border-top:1px solid rgba(255,255,255,.5);padding-top:36px;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+.site-footer ul{display:flex;gap:60px;list-style:none}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+
+/* legal pages */
+.legal{padding:64px 0 96px}
+.legal .wrap{max-width:860px}
+.legal h1{color:var(--ink);font-size:40px;margin-bottom:24px}
+.legal h2{color:var(--ink);font-size:20px;margin:28px 0 8px}
+.legal p,.legal li{font-size:16px;margin-bottom:12px}
+.legal ul{padding-left:22px;margin-bottom:12px}
+
+/* responsive */
+@media (max-width:900px){
+  .hero .wrap,.about .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:36px}
+  .cards{grid-template-columns:1fr;gap:24px;max-width:480px;margin:0 auto}
+  .nav{gap:20px}
+}
+@media (max-width:600px){
+  .site-header .wrap{flex-direction:column;height:auto;padding:16px;gap:12px}
+  .nav{gap:16px;flex-wrap:wrap;justify-content:center}
+  .nav a{font-size:14px}
+  .hero{padding:48px 0 64px}
+  .hero p{font-size:18px}
+  .site-footer .wrap{flex-direction:column;gap:20px}
+  .site-footer ul{gap:32px}
+}
